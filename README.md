@@ -358,13 +358,6 @@ Kami menyambut kontribusi dari siapa saja! Jika Anda ingin berkontribusi:
 
 Proyek ini menggunakan lisensi MIT. Anda bebas menggunakan, memodifikasi, dan mendistribusikan kode ini.
 
-## 📞 Kontak dan Dukungan
-
-Jika Anda memiliki pertanyaan atau butuh bantuan:
-- Buat issue di GitHub repository
-- Email: support@example.com
-- Website: https://example.com
-
 ---
 
 **Selamat berkreasi dengan amplop surat animasi Anda! 💌✨**
