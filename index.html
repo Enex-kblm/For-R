@@ -12,10 +12,44 @@
       <div class="lid one"></div>
       <div class="lid two"></div>
       <div class="envelope"></div>
-      <div class="letter">
+      <div class="letter" onclick="openFullscreenLetter()">
         <p class="main-message">Happy Girlfriend's Day! 💖</p>
         <p class="sub-message">You're my everything ✨</p>
       </div>
     </div>
+    
+    <!-- Full screen letter overlay -->
+    <div class="letter-overlay" id="letterOverlay" onclick="closeFullscreenLetter(event)">
+      <div class="fullscreen-letter" onclick="event.stopPropagation()">
+        <button class="close-btn" onclick="closeFullscreenLetter()">&times;</button>
+        <h1>Happy Girlfriend's Day! 💖</h1>
+        <p>Pada hari istimewa ini, aku ingin kamu tahu betapa berartinya kamu bagiku.</p>
+        <p>Setiap hari bersamamu adalah anugerah yang tak ternilai. Senyummu adalah matahari yang menerangi hariku, dan tawamu adalah musik terindah yang pernah kudengar.</p>
+        <p>Terima kasih telah menjadi bagian terpenting dalam hidupku. Kamu bukan hanya pacarku, tapi juga sahabat terbaik, partner dalam segala hal, dan cinta sejatiku.</p>
+        <p class="signature">Dengan cinta yang tak terbatas,<br>💕 Your Love 💕</p>
+      </div>
+    </div>
+    
+    <script>
+      function openFullscreenLetter() {
+        const overlay = document.getElementById('letterOverlay');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+      
+      function closeFullscreenLetter(event) {
+        if (event) event.stopPropagation();
+        const overlay = document.getElementById('letterOverlay');
+        overlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+      
+      // Close with Escape key
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          closeFullscreenLetter();
+        }
+      });
+    </script>
   </body>
 </html>
